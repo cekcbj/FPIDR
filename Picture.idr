@@ -11,3 +11,12 @@ data Picture = Primitive Shape
              | Combine Picture Picture
              | Rotate Double Picture
              | Translate Double Double Picture
+
+rectangle : Picture
+
+circle : Picture
+
+testPicture : Picture
+testPicture = Combine (Translate 5 5 rectangle)
+               (Combine (Translate 35 5circle)
+               (Translate 15 25 ?triangle))
